@@ -1,0 +1,43 @@
+.paginationWrapper {
+    margin-top: 30px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+button {
+    border: none;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+    color: #474955;
+
+}
+
+
+span {
+    cursor: pointer;
+    color: #474955;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 25px;
+
+}
+
+span:not(:last-child) {
+    margin-right: 5px;
+}
+
+.active {
+    background-image: linear-gradient(0deg, #7EBC3C, #7EBC3C);
+    background-clip: text;
+    color: transparent;
+
+}

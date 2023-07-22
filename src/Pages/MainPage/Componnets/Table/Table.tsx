@@ -1,11 +1,17 @@
 import React from 'react';
 import style from './table.module.css'
 import {useAppSelector} from "../../../../store/store";
-import {allUsersSelector} from "../../../../store/selectors";
+import {selectUsersForCurrentPage} from "../../../../store/selectors";
 import {OneUserType} from "../../../../types/types";
+import {Pagination} from "../../../../Componnets/Pagination/Pagination";
+
 
 export const Table = () => {
-    const users = useAppSelector(allUsersSelector);
+    const users = useAppSelector(selectUsersForCurrentPage);
+
+    if (!users) {
+        return <div>Loading...</div>;
+    }
 
     return (
         <div>
@@ -28,7 +34,9 @@ export const Table = () => {
                 ))}
                 </tbody>
             </table>
+            <Pagination/>
         </div>
     );
 };
+
 

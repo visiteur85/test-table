@@ -2,7 +2,9 @@
 table {
     border-collapse: collapse;
     width: 100%;
+    table-layout: fixed;
 }
+
 
 .thead {
     background-color: #474955;
@@ -39,6 +41,8 @@ tbody td {
     font-size: 13px;
     line-height: 18px;
     padding: 15px;
+    height: 105px;
+
 
 }
 

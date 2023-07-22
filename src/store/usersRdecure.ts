@@ -4,14 +4,31 @@ import {Dispatch} from "redux";
 import {usersApi} from "../api/usersApi";
 
 
-type StateType = UsersType | [];
+type StateType = {
+    users: UsersType;
+    currentPage: number;
+    usersPerPage: number;
+};
+const initialState: StateType = {
+    users: [],
+    currentPage: 1,
+    usersPerPage: 10,
+};
 
-const initialState: StateType = [];
 
 export const usersReducer = (state = initialState, action: UsersActionType): any => {
     switch (action.type) {
         case 'GET-USERS':
-            return action.users
+            return {
+                ...state,
+                users: action.users
+            };
+
+        case 'SET-CURRENT-PAGE':
+            return {
+                ...state,
+                currentPage: action.page,
+            };
         default:
             return state
     }
@@ -19,6 +36,7 @@ export const usersReducer = (state = initialState, action: UsersActionType): any
 
 //actions
 export const getUsersAC = (users: UsersType) => ({type: 'GET-USERS', users} as const)
+export const setCurrentPageAC = (page: number) => ({type: 'SET-CURRENT-PAGE', page} as const);
 
 //thunks
 export const getUsersTS = (): AppThunk => async (dispatch: Dispatch) => {
@@ -32,4 +50,4 @@ export const getUsersTS = (): AppThunk => async (dispatch: Dispatch) => {
 }
 
 //types
-export type UsersActionType = ReturnType<typeof getUsersAC>
+export type UsersActionType = ReturnType<typeof getUsersAC> | ReturnType<typeof setCurrentPageAC>
