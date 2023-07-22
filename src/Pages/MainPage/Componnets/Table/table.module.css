@@ -1,0 +1,54 @@
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.thead {
+    background-color: #474955;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+
+}
+
+thead th {
+    padding: 15px;
+}
+
+.col1 {
+    width: 10%;
+
+}
+
+.col2 {
+    width: 50%;
+
+}
+
+.col3 {
+    width: 40%;
+
+}
+
+tbody td {
+    border: 1px solid #E3E6EC;
+    color: #474955;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    padding: 15px;
+
+}
+
+
+tbody tr td:first-child {
+    text-align: center;
+    vertical-align: middle;
+}
+
+tbody tr td:nth-child(2) {
+
+    vertical-align: middle;
+}

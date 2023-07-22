@@ -1,0 +1,33 @@
+.inputContainer {
+    position: relative;
+    margin-bottom: 40px;
+
+}
+input {
+    background-color: #5A5C66;
+    padding: 15px 20px;
+    width: 100%;
+    color:#B2B7BF;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+;
+
+}
+@media screen and (min-width: 767px) {
+   input {
+   width: 60%}
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 93%;
+    transform: translateY(-50%);
+
+}
+@media screen and (min-width: 767px) {
+    .icon {
+        left: 55%;
+    }
+}
