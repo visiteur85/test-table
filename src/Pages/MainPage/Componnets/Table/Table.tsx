@@ -37,11 +37,13 @@ export const Table = () => {
             <table>
                 <thead className={style.thead}>
                 <tr>
-                    <th className={style.col1}>
-                        <span className={style.title}>ID</span>
+                    <th className={`${style.col1} ${style.titleCo1}`}>
+                        <span>ID</span>
+
                         {<SortSVG onClick={() => {
                             onSorting('id')
                         }} className={filteredUsers.length === 1 ? style.none : style.sortIcon}/>}
+
                     </th>
                     <th className={style.col2}>
                         <span className={style.title}>Заголовок</span>

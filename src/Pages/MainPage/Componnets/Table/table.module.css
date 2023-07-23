@@ -75,3 +75,13 @@ h2 {
 .none {
     display: none;
 }
+
+.titleCo1 {
+    display: flex;
+    gap: 25px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
