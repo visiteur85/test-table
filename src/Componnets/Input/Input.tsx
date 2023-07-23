@@ -4,6 +4,7 @@ import {ReactComponent as FindIcon} from '../../assets/icon/search-svgrepo-com 1
 import {useAppDispatch} from "../../store/store";
 import {debounce} from "../../utils/debounce";
 import {setDateToFindAC} from "../../store/usersReducer";
+import {updateUrl} from "../../utils/ipdateUrl";
 
 export const Search = () => {
     const [value, setValue] = useState('');
@@ -16,7 +17,8 @@ export const Search = () => {
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setValue(e.currentTarget.value)
-        handleSearchQueryChange(e.currentTarget.value)
+        handleSearchQueryChange(e.currentTarget.value);
+        updateUrl(1)
     }
 
 

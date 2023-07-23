@@ -46,8 +46,9 @@ export const usersReducer = (state = initialState, action: UsersActionType): any
                         String(id).includes(action.value) ||
                         body.includes(action.value) ||
                         title.includes(action.value)
+
                     )
-                }) : [],
+                })  : [],
             };
         case 'SORTING-TABLE':
             let sortedUsers;
