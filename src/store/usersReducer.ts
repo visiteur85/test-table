@@ -2,7 +2,6 @@ import {OneUserType, UsersType} from "../types/types";
 import {AppThunk} from "./store";
 import {Dispatch} from "redux";
 import {usersApi} from "../api/usersApi";
-import {filteredUsersSelector} from "./selectors";
 
 
 type StateType = {
@@ -97,7 +96,7 @@ export const usersReducer = (state = initialState, action: UsersActionType): any
 export const getUsersAC = (users: UsersType) => ({type: 'GET-USERS', users} as const)
 export const setCurrentPageAC = (page: number) => ({type: 'SET-CURRENT-PAGE', page} as const);
 export const setDateToFindAC = (value: string) => ({type: 'SET-DATE-FROM-INPUT', value} as const);
-export const sortTableAC = (value: string ) => ({type: 'SORTING-TABLE', value} as const);
+export const sortTableAC = (value: string) => ({type: 'SORTING-TABLE', value} as const);
 
 //thunks
 export const getUsersTS = (): AppThunk => async (dispatch: Dispatch) => {

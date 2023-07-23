@@ -41,19 +41,19 @@ export const Table = () => {
                         <span className={style.title}>ID</span>
                         {<SortSVG onClick={() => {
                             onSorting('id')
-                        }} className={filteredUsers.length > 1 ? style.sortIcon : style.none}/>}
+                        }} className={filteredUsers.length === 1 ? style.none : style.sortIcon}/>}
                     </th>
                     <th className={style.col2}>
                         <span className={style.title}>Заголовок</span>
                         {<SortSVG onClick={() => {
                             onSorting('title')
-                        }} className={filteredUsers.length > 1 ? style.sortIcon : style.none}/>}
+                        }} className={filteredUsers.length === 1 ? style.none : style.sortIcon}/>}
                     </th>
                     <th className={style.col3}>
                         <span className={style.title}>Описание</span>
                         {<SortSVG onClick={() => {
                             onSorting('body')
-                        }} className={filteredUsers.length > 1 ? style.sortIcon : style.none}/>}
+                        }} className={filteredUsers.length === 1 ? style.none : style.sortIcon}/>}
                     </th>
 
                 </tr>

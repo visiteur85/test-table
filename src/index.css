@@ -1,8 +1,8 @@
 body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /*code {*/
@@ -19,28 +19,27 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td, input {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-//font: inherit;
-  vertical-align: baseline;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    box-sizing: border-box;
 }
 
 li {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 a {
-  text-decoration: none;
-  color: white;
+    text-decoration: none;
+    color: white;
 
 }
 
 .container {
-  margin: 0 auto;
-  max-width: 1077px;
-  padding: 40px 0;
+    margin: 0 auto;
+    max-width: 1077px;
+    padding: 40px 0;
 
 }

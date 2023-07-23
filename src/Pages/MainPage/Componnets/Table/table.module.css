@@ -66,8 +66,9 @@ h2 {
 .sortIcon {
     cursor: pointer;
 }
+
 .title {
- margin-right: 25px;
+    margin-right: 25px;
     display: inline-block;
 }
 
