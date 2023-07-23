@@ -20,17 +20,17 @@ thead th {
 }
 
 .col1 {
-    width: 10%;
+    width: 15%;
 
 }
 
 .col2 {
-    width: 50%;
+    width: 40%;
 
 }
 
 .col3 {
-    width: 40%;
+    width: 45%;
 
 }
 
@@ -68,7 +68,7 @@ h2 {
 }
 
 .title {
-    margin-right: 25px;
+    margin-right: 20px;
     display: inline-block;
 }
 
