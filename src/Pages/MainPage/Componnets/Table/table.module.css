@@ -56,3 +56,21 @@ tbody tr td:nth-child(2) {
 
     vertical-align: middle;
 }
+
+h2 {
+    text-align: center;
+    color: darkred;
+    font-size: 24px;
+}
+
+.sortIcon {
+    cursor: pointer;
+}
+.title {
+ margin-right: 25px;
+    display: inline-block;
+}
+
+.none {
+    display: none;
+}

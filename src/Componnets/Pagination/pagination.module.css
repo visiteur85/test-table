@@ -1,5 +1,6 @@
 .paginationWrapper {
     margin-top: 30px;
+    padding: 0 20px;
 }
 
 .pagination {
@@ -21,7 +22,7 @@ button {
 }
 
 
-span {
+.list {
     cursor: pointer;
     color: #474955;
     font-weight: 700;
@@ -31,7 +32,7 @@ span {
 
 }
 
-span:not(:last-child) {
+.list:not(:last-child) {
     margin-right: 5px;
 }
 
@@ -40,4 +41,8 @@ span:not(:last-child) {
     background-clip: text;
     color: transparent;
 
+}
+
+.end {
+    opacity: 0.5;
 }

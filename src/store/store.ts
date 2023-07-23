@@ -1,7 +1,7 @@
 import {applyMiddleware, combineReducers, createStore} from "redux";
 import thunkMiddleware, {ThunkAction, ThunkDispatch} from 'redux-thunk'
 import {TypedUseSelectorHook, useDispatch, useSelector} from "react-redux";
-import {UsersActionType, usersReducer} from "./usersRdecure";
+import {UsersActionType, usersReducer} from "./usersReducer";
 
 
 const rootReducer = combineReducers({

@@ -2,7 +2,8 @@ export type UsersType = OneUserType[]
 
 export type OneUserType = {
     userId: number
-    id:number
+    id: number
     title: string
-    body:string
+    body: string
+    [key: string]: string | number;
 }
