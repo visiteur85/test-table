@@ -6,8 +6,8 @@ import {debounce} from "../../utils/debounce";
 import {setDateToFindAC} from "../../store/usersReducer";
 
 export const Search = () => {
+    const [value, setValue] = useState('');
 
-    const [value, setValue] = useState('')
 
     const dispatch = useAppDispatch();
     const handleSearchQueryChange = debounce((query: string) => {
@@ -23,7 +23,8 @@ export const Search = () => {
     return (
         <div className={style.inputContainer}>
             <input value={value} onChange={handleInputChange} type='text' placeholder="Поиск"/>
-            <FindIcon className={style.icon}/>
+            {!value && <FindIcon className={style.icon}/>}
+
         </div>
     );
 };

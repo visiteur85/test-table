@@ -19,8 +19,8 @@ export const Table = () => {
     const inputData = useAppSelector(inputDateSelectorSelector);
 
 
-    const onSorting =(value:string) => {
-      dispatch(sortTableAC(value))
+    const onSorting = (value: string) => {
+        dispatch(sortTableAC(value))
     }
 
 
@@ -39,15 +39,21 @@ export const Table = () => {
                 <tr>
                     <th className={style.col1}>
                         <span className={style.title}>ID</span>
-                        {<SortSVG onClick={()=>{onSorting('id')}} className={filteredUsers.length > 1 ? style.sortIcon : style.none}/>}
+                        {<SortSVG onClick={() => {
+                            onSorting('id')
+                        }} className={filteredUsers.length > 1 ? style.sortIcon : style.none}/>}
                     </th>
                     <th className={style.col2}>
                         <span className={style.title}>Заголовок</span>
-                        {<SortSVG onClick={()=>{onSorting('title')}} className={filteredUsers.length > 1 ? style.sortIcon : style.none}/>}
+                        {<SortSVG onClick={() => {
+                            onSorting('title')
+                        }} className={filteredUsers.length > 1 ? style.sortIcon : style.none}/>}
                     </th>
                     <th className={style.col3}>
                         <span className={style.title}>Описание</span>
-                        {<SortSVG onClick={()=>{onSorting('body')}} className={filteredUsers.length > 1 ? style.sortIcon : style.none}/>}
+                        {<SortSVG onClick={() => {
+                            onSorting('body')
+                        }} className={filteredUsers.length > 1 ? style.sortIcon : style.none}/>}
                     </th>
 
                 </tr>
