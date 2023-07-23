@@ -33,7 +33,7 @@ button {
 }
 
 .list:not(:last-child) {
-    margin-right: 5px;
+    margin-right: 4px;
 }
 
 .active {
