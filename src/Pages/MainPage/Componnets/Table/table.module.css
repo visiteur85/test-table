@@ -43,9 +43,6 @@ tbody td {
     padding: 15px;
 
 
-
-
-
 }
 
 
@@ -55,7 +52,6 @@ tbody tr td:first-child {
 }
 
 tbody tr td:nth-child(2) {
-
     vertical-align: middle;
 }
 
@@ -80,10 +76,16 @@ h2 {
 
 .titleCo1 {
     display: flex;
-    gap: 25px;
+    gap: 7px;
     width: 100%;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 
+
+}
+@media screen and (min-width: 560px) {
+    .titleCo1 {
+        gap: 20px;
+    }
 }

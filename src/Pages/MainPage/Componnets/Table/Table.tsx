@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './table.module.css'
 import {useAppDispatch, useAppSelector} from "../../../../store/store";
-import {OneUserType} from "../../../../types/types";
+import {UserType} from "../../../../types/types";
 import {Pagination} from "../../../../Componnets/Pagination/Pagination";
 import {
     filteredUsersSelector,
@@ -31,6 +31,7 @@ export const Table = () => {
     if (inputData && filteredUsers.length === 0) {
         return <h2>Совпадений нет</h2>
     }
+    const sortSvgStyle = filteredUsers.length === 1 ? style.none : style.sortIcon
 
     return (
         <div>
@@ -42,27 +43,27 @@ export const Table = () => {
 
                         {<SortSVG onClick={() => {
                             onSorting('id')
-                        }} className={filteredUsers.length === 1 ? style.none : style.sortIcon}/>}
+                        }} className={sortSvgStyle}/>}
 
                     </th>
                     <th className={style.col2}>
                         <span className={style.title}>Заголовок</span>
                         {<SortSVG onClick={() => {
                             onSorting('title')
-                        }} className={filteredUsers.length === 1 ? style.none : style.sortIcon}/>}
+                        }} className={sortSvgStyle}/>}
                     </th>
                     <th className={style.col3}>
                         <span className={style.title}>Описание</span>
                         {<SortSVG onClick={() => {
                             onSorting('body')
-                        }} className={filteredUsers.length === 1 ? style.none : style.sortIcon}/>}
+                        }} className={sortSvgStyle}/>}
                     </th>
 
                 </tr>
                 </thead>
                 <tbody>
 
-                {users.map(({id, body, title}: OneUserType) => (
+                {users.map(({id, body, title}: UserType) => (
                     <tr key={id}>
                         <td className={style.col1}>{id}</td>
                         <td className={style.col2}>{title}</td>

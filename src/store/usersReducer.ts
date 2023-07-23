@@ -1,4 +1,4 @@
-import {OneUserType, UsersType} from "../types/types";
+import {UserType, UsersType} from "../types/types";
 import {AppThunk} from "./store";
 import {Dispatch} from "redux";
 import {usersApi} from "../api/usersApi";
@@ -8,7 +8,7 @@ type StateType = {
     users: UsersType;
     currentPage: number;
     usersPerPage: number;
-    searchingDate: string
+    searchingData: string
     filteredUsers: UsersType
     sorting: 'up' | 'down'
 
@@ -17,7 +17,7 @@ const initialState: StateType = {
     users: [],
     currentPage: 1,
     usersPerPage: 10,
-    searchingDate: '',
+    searchingData: '',
     filteredUsers: [],
     sorting: 'down'
 };
@@ -36,12 +36,12 @@ export const usersReducer = (state = initialState, action: UsersActionType): any
                 ...state,
                 currentPage: action.page,
             };
-        case 'SET-DATE-FROM-INPUT':
+        case 'SET-DATA-FROM-INPUT':
             return {
                 ...state,
                 currentPage: 1,
                 searchingDate: action.value,
-                filteredUsers: action.value ? state.users.filter(({id, body, title}: OneUserType) => {
+                filteredUsers: action.value ? state.users.filter(({id, body, title}: UserType) => {
                     return (
                         String(id).includes(action.value) ||
                         body.includes(action.value) ||
@@ -95,7 +95,7 @@ export const usersReducer = (state = initialState, action: UsersActionType): any
 //actions
 export const getUsersAC = (users: UsersType) => ({type: 'GET-USERS', users} as const)
 export const setCurrentPageAC = (page: number) => ({type: 'SET-CURRENT-PAGE', page} as const);
-export const setDateToFindAC = (value: string) => ({type: 'SET-DATE-FROM-INPUT', value} as const);
+export const setDateToFindAC = (value: string) => ({type: 'SET-DATA-FROM-INPUT', value} as const);
 export const sortTableAC = (value: string) => ({type: 'SORTING-TABLE', value} as const);
 
 //thunks

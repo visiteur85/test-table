@@ -1,9 +1,8 @@
-export type UsersType = OneUserType[]
+export type UsersType = UserType[]
 
-export type OneUserType = {
+export type UserType = {
     userId: number
     id: number
     title: string
     body: string
-    [key: string]: string | number;
 }
